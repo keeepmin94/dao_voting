@@ -70,10 +70,8 @@ contract B2 {
     }
 
     // user 정보 받아오기, 자기 지갑과 연결된 정보 받아오기
-    function getUser() public view returns(string memory) {
-        // users 매핑에 msg.sender를 key 값으로 주고 name과 poll_list의 길이(poll_list.length)를 output값으로 설정
-        return (users[msg.sender].name);
-        // return (users[msg.sender].name, users[msg.sender].poll_list.length);
+    function getUser() public view returns(string memory, uint) {
+        return (users[msg.sender].name, users[msg.sender].poll_list.length);
     }
 
     function vote(string memory _title, bool _b) public {
