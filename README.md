@@ -68,3 +68,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### 0207
+
+1. getUser 리턴값, 파라미터 두개 확인
+2. 1_voting_migration.js 생성
+3. npm install @truffle/hdwallet-provider
+4. truffle test
+5. truffle compile
+6. truffle migrate --network goerli --reset
+7. Ganache 베포

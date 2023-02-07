@@ -1,6 +1,6 @@
 const daovote = artifacts.require("B2");
 
-contract(" ", async () => {
+contract(" ", async ({ deployer, user1, user2 }) => {
   let vote;
   before(async () => {
     vote = await daovote.new();
@@ -13,8 +13,18 @@ contract(" ", async () => {
 
     it("getUser test", async () => {
       const res = await vote.getUser();
-      assert.equal(res, "user2");
+      assert.equal(res.toString(), { name: "user2", length: 0 });
     });
+
+    // it("getUser test_name", async () => {
+    //   const res = await vote.getUser();
+    //   assert.equal(res[0], "user2");
+    // });
+
+    // it("getUser test_length", async () => {
+    //   const res = await vote.getUser();
+    //   assert.equal(res[1], 0);
+    // });
   });
 
   describe("poll fn test", async () => {
@@ -38,3 +48,4 @@ contract(" ", async () => {
     });
   });
 });
+//D:\dao\daotest>truffle test
