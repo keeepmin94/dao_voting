@@ -78,3 +78,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 5. truffle compile
 6. truffle migrate --network goerli --reset
 7. Ganache 베포
+8. https://github.com/ethereum/EIPs/blob/master/EIPS/eip-4907.md
+
+### 0214
