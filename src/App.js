@@ -1,14 +1,35 @@
-// import styled from "styled-components;";
-
-// const Container = styled.div`
-//   width: 900px;
-//   margin: 0 auto;
-//   background-color: bisque;
-// `;
+import styled from "styled-components";
 import { useState } from "react";
 import { useEffect } from "react";
 import Web3 from "web3";
 import voteContract from "./ABI/voting";
+
+const Container = styled.div`
+  width: 900px;
+  height: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: lavender;
+`;
+
+const WalletButton = styled.button`
+  width: 150px;
+  height: 25px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  background-color: aliceblue;
+`;
+
+const LoadingBox = styled.div`
+  font-size: 35px;
+  font-weight: 800;
+  color: blueviolet;
+`;
 
 function App() {
   // const web3 = new Web3(window.ethereum);
@@ -66,9 +87,9 @@ function App() {
   };
 
   return (
-    <div>
-      <div>{isLoading ? "LOADING" : null}</div>
-      <div onClick={walletHandler}>1. connect wallet</div>
+    <Container>
+      <LoadingBox>{isLoading ? "LOADING" : null}</LoadingBox>
+      <WalletButton onClick={walletHandler}>1. connect wallet</WalletButton>
       <h6>userAccount : {userAccount}</h6>
       <button
         onClick={() => {
@@ -90,7 +111,7 @@ function App() {
       <div>6. search Item</div>
       <div>7. vote</div>
       <div>8. Result</div>
-    </div>
+    </Container>
   );
 }
 
