@@ -56,6 +56,7 @@ function App() {
 
   const [isLoading, setIsLoading] = useState(false);
   const [userName, setUserName] = useState();
+
   const [userData, setUserData] = useState([null, null]);
   const [pollData, setPollData] = useState({
     number: null,
@@ -70,6 +71,7 @@ function App() {
   const nameRef = useRef(null);
   const contentRef = useRef(null);
   var radios = document.getElementsByName("poll");
+
   async function walletHandler() {
     try {
       if (typeof window.ethereum !== "undefined") {
@@ -137,6 +139,7 @@ function App() {
       });
   };
 
+  //안쓰는 함수
   const settingPollData = () => {
     // pollData.map((data) => {
     //   console.log(data);
@@ -172,6 +175,7 @@ function App() {
     //   });
     const tmp = await contract.methods.getPoll(nameRef.current.value).call();
     setPollData(tmp);
+    //-> then 함수로 바꾸기
   };
 
   const vote = async () => {
@@ -286,10 +290,10 @@ function App() {
         >
           7. 투표하기
         </button>
-        <input type="radio" id="true" name="poll" value={true} />
-        <label for="true">동의</label>
-        <input type="radio" id="false" name="poll" value={false} />
-        <label for="false">비동의</label>
+        <input type="radio" name="poll" value={true} />
+        <label>동의</label>
+        <input type="radio" name="poll" value={false} />
+        <label>비동의</label>
       </div>
       <div>8. Result</div>
     </Container>
