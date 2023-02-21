@@ -81,3 +81,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 8. https://github.com/ethereum/EIPs/blob/master/EIPS/eip-4907.md
 
 ### 0214
+
+1. getUSer msg.sender 문제 call({ from: userAccount })로 해결
+2. 나머지 sol함수들 구현
+
+### 0221
+
+1. 기능적으로는 구현 완료
+2. contract 좀 더 보완할 것
+3. 화면 꾸미기
