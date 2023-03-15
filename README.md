@@ -1,27 +1,32 @@
-# daoApp
-토이 프로젝트로 만들고 있는 dao프로젝트입니다.
-contract, front 등 조금씩 수정하여 실 사용 가능할 정도로 만드는것이 목표입니다.
+# Dao-voting
 
-##issue
+        
+# 소개 
+ - 스마트 컨트랙트를 이용한 투표 시스템
+ - 유저는 안건을 올리고 찬반 투표를 할 수 있다.
+ - 안건의 투표자가 10명 이상이며 찬성 비율이 70% 이상이면 안건이 통과, 이하면 기각
 
-### 0207
 
-1. getUser 리턴값, 파라미터 두개 확인
-2. 1_voting_migration.js 생성
-3. npm install @truffle/hdwallet-provider
-4. truffle test
-5. truffle compile
-6. truffle migrate --network goerli --reset
-7. Ganache 베포
-8. https://github.com/ethereum/EIPs/blob/master/EIPS/eip-4907.md
 
-### 0214
+## 사용 기술
+- solidity
+- truffle
+- react
 
-1. getUSer msg.sender 문제 call({ from: userAccount })로 해결
-2. 나머지 sol함수들 구현
 
-### 0221
+## 기능
+- 지갑 로그인
+- 유저 이름 등록
+- 투표 안건 올리기
+- 안건 투표
+- 투표 종료
+- test.js
 
-1. 기능적으로는 구현 완료
-2. contract 좀 더 보완할 것
-3. 화면 꾸미기
+![dao1](https://user-images.githubusercontent.com/47639565/225405975-9e62c546-6f82-4d5c-9878-30016e3412dc.gif)
+![dao2](https://user-images.githubusercontent.com/47639565/225406005-60557f84-cdd5-474e-8232-3a8d482af6a7.gif)
+
+
+## Todo
+- 토큰 사용
+- 안건 등록시 content 내용 많을시 
+- frontend 수정
